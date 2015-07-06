@@ -1,7 +1,7 @@
 var exp=require('express');
 app=exp();
 
-app.use('/chat', function (req,res,next) {
+app.use('/', function (req, res, next) {
     var io=require('socket.io')(require('./includes/session').serverObj);
     res.sendFile(__dirname+'/index.html');
     io.on('connection',function(socket){
