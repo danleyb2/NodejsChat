@@ -1,0 +1,112 @@
+@keyframes hide{
+    from{height: 25px;}
+    to{height: 0;}
+}
+body{
+    background-color: #fffdf4;
+    font-family: sans-serif;
+}
+li{
+    list-style-type: none;
+    margin-bottom: 5px;
+
+}
+ul{
+    padding-left:10px ;
+}
+#username{
+    margin-left: 2px;
+
+}
+#history{
+    height: 500px;
+    position: absolute;
+    background-color: #dcef75;
+    left: 20px;
+    padding: 2px;
+    border-radius: 2px 0 0 2px;
+    overflow-y: auto;
+}
+#history div{
+    padding: 2px 2px 0px 5px;
+    border-radius: 2px;
+    width: 90%;
+    font-size: small;
+    font-family: cursive;
+    margin: 2px;
+}
+.a{
+    float: left;
+    background-color: chocolate;
+}
+.b{
+    background-color: darkorange;
+    float: right;
+    }
+#current{
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 500px;
+    border-radius: 0 2px 2px 0;
+    width: 100px;
+    position: relative;
+    padding: 2px;
+    left: 306px;
+    background-color: burlywood;
+}
+div#current p{
+    margin: 0 0 0 2px;
+    padding: 0;
+
+}
+textarea {
+    height: 40px;
+    resize: none;
+    position: absolute;
+}
+input#go{
+    width: 95px;
+    border: none;
+    background-color: #8FA613;
+    height: 22px;
+}
+input#go:hover{
+    color: white;
+    background-color: #5b0723;
+
+
+}
+input#go:active{
+    color: #2b2239;
+    background-color: #835733;
+
+}
+input#submit{
+    position: relative;
+    left: 310px;
+    width: 95px;
+    height: 40px;
+    border: none;
+    background-color: #8FA613;
+    top: 4px;
+}
+input#submit:hover{
+    color: white;
+    background-color: #5b0723;
+
+}
+input#submit:active{
+    color: #2b2239;
+    background-color: #835733;
+
+}
+.sizing{
+    width: 300px;
+
+}
+.join {
+    /*animation-name:hide;
+    animation-duration:5s;
+    height: 0px*/
+    display: none;
+}

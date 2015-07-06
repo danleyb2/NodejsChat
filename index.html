@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Nodejs Group chat</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="header">
+
+
+</div>
+
+
+<div id="content">
+
+<form>
+    <ul>
+
+        <li id="hideE">
+            <input type="text" class="sizing" placeholder="Choose a username and go.." autocomplete="off" id="username"> <input type="button" onclick="addNew()" id="go" value="Go!">
+        </li>
+        <li>
+            <div id="history" class="sizing">
+
+
+            </div>
+            <div id="current">
+                <p style="text-align:center; color: #5b0723; padding-top:0; ">Users</p>
+
+            </div>
+        </li>
+        <li style="height: 50px;">
+            <textarea class="sizing" id="txt"></textarea>
+            <input type="button" id="submit" onclick="sendNew()" value="Send">
+        </li>
+        <li style="margin-top: 5px">
+            <label for="chk">Check to send with enter key</label>
+            <input type="checkbox" id="chk">
+        </li>
+    </ul>
+</form>
+</div>
+<div id="footer"></div>
+<script src="socket.io/socket.io.js"></script>
+<script src="/lib/jquery.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
