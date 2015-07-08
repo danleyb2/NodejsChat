@@ -1,11 +1,10 @@
-var enterKeyEnabled=false,
-    username=null,
+var username = null,
     socket=io();
 
 
 socket.on('chat message',function(mesg){
     var msg=JSON.parse(mesg);
-    console.log("Message Received"+msg);
+
 
     var div=document.createElement('DIV');
 
@@ -21,7 +20,7 @@ socket.on('chat message',function(mesg){
     $('#history').append(div);
 });
 
-function messageObj(sender,content){
+function MessageObj(sender, content) {
     this.sender=sender;
     this.contet=content;
 }
@@ -43,16 +42,16 @@ window.onkeydown=function(event){
         sendNew();
         return false;
     }
-}
+};
 function sendNew(){
     if(username != null){
     var msg=document.getElementById('txt').value.toString().trim();
     if(msg!=="") {
         //send message
-        var ms=new messageObj(username,msg);
+        var ms = new MessageObj(username, msg);
         socket.emit('chat message',JSON.stringify(ms));
         document.getElementById('txt').value = "";
-        console.log(msg);
+
         return false;
     }else{
         console.log("Can't send a blank message");
